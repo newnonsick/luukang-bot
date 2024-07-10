@@ -1,0 +1,4 @@
+discord.py
+datetime
+google-generativeai
+pymongo

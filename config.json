@@ -1,0 +1,32 @@
+{
+    "generation_config": {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_output_tokens": 600,
+        "response_mime_type": "text/plain"
+    },
+    "model_name": "gemini-1.5-pro",
+    "fileTypeSupport": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/heic",
+        "image/heif",
+        "text/csv",
+        "text/plain",
+        "text/html",
+        "text/css",
+        "text/javascript",
+        "application/x-javascript",
+        "text/x-typescript",
+        "application/x-typescript",
+        "text/markdown",
+        "text/x-python",
+        "application/x-python-code",
+        "application/json",
+        "text/xml",
+        "application/rtf",
+        "text/rtf"
+    ]
+}
