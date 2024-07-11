@@ -10,6 +10,10 @@ class NewConversation(commands.Cog):
 
     @app_commands.command(name="newconversation", description="Start a new conversation with the bot")
     async def new_conversation(self, interaction: discord.Interaction):
+        if not interaction.guild:
+            await interaction.response.send_message("This command is only available in a server.")
+            return
+
         await interaction.response.defer()
         if interaction.guild.id not in self.data_storage.guildDict:
             self.data_storage.guildDict[interaction.guild.id] = Guild(interaction.guild.id)
