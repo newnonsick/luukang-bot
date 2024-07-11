@@ -1,6 +1,4 @@
 from discord.ext import commands
-from models.mongodb_client import MongoDBClient
-from models.guild import Guild
 
 class GuildsEvents(commands.Cog):
 
