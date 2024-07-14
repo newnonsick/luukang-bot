@@ -3,7 +3,7 @@
         "temperature": 1,
         "top_p": 0.95,
         "top_k": 64,
-        "max_output_tokens": 600,
+        "max_output_tokens": 700,
         "response_mime_type": "text/plain"
     },
     "model_name": "gemini-1.5-pro",
