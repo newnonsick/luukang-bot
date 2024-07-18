@@ -5,4 +5,4 @@ pymongo
 python-dotenv
 opencv-python
 yt-dlp
-urllib
+urllib3
