@@ -7,6 +7,7 @@ from client_events.gateway_events import GatewayEvents
 from client_events.guilds_events import GuildsEvents
 from slash_commands.new_conversation import NewConversation
 from slash_commands.talk import Talk
+from slash_commands.summarize_video import SummarizeVideo
 from data_storage import DataStorage
 from dotenv import load_dotenv
 
@@ -21,11 +22,12 @@ client = commands.Bot(command_prefix='!', intents=intents)
 async def main():
     async with client:
         load_dotenv()
-        data_storage = DataStorage()
-        await client.add_cog(GatewayEvents(client=client, dataStorage=data_storage))
-        await client.add_cog(GuildsEvents(client=client, dataStorage=data_storage))
-        await client.add_cog(NewConversation(client=client, data_storage=data_storage))
-        await client.add_cog(Talk(client=client, data_storage=data_storage))
+        DataStorage.initialize()
+        await client.add_cog(SummarizeVideo(client=client))  
+        await client.add_cog(GatewayEvents(client=client))
+        await client.add_cog(GuildsEvents(client=client))
+        await client.add_cog(NewConversation(client=client))
+        await client.add_cog(Talk(client=client))
         await client.start(os.getenv("BOT_TOKEN"))
 
 
