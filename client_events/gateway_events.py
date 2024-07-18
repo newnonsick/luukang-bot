@@ -8,8 +8,6 @@ class GatewayEvents(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        print(1)
         await self.client.tree.sync()
-        print(2)
         await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=f"to some questions!")) 
         print(f'We have logged in as {self.client.user.name}')  

@@ -8,7 +8,6 @@ import os
 import google.generativeai as genai
 from utils import Utils
 import asyncio
-
 from data_storage import DataStorage
 
 class SummarizeVideo(commands.Cog):
