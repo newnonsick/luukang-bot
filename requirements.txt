@@ -3,6 +3,6 @@ datetime
 google-generativeai
 pymongo
 python-dotenv
-opencv-python
+opencv-python-headless
 yt-dlp
 urllib3
